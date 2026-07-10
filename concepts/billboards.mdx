@@ -1,0 +1,69 @@
+---
+title: "Billboards: Core Inventory Unit in AddtoZ Platform"
+sidebarTitle: "Billboards"
+description: "Learn how AddtoZ models billboard inventory — locations, formats, pricing, availability, and how billboards connect to campaigns and bookings."
+---
+
+In AddtoZ, a **Billboard** represents a physical advertising display at a specific geographic location. Billboards are the core unit of inventory — every campaign, booking, and availability check in the platform traces back to an individual billboard record.
+
+## Billboard properties
+
+Each billboard in AddtoZ carries the following properties:
+
+<ResponseField name="Name" type="string" required>
+  A human-readable label for identifying this billboard (e.g., `Main Street South-facing`). Choose a name that makes it easy to distinguish from nearby displays.
+</ResponseField>
+
+<ResponseField name="Location" type="object" required>
+  The full street address and GPS coordinates of the billboard. AddtoZ uses these coordinates to render the billboard on the map view and to calculate proximity-based search results.
+</ResponseField>
+
+<ResponseField name="Dimensions" type="string" required>
+  Width × height expressed in feet or meters (e.g., `14ft × 48ft`). Dimensions inform advertisers of the artwork specifications they must meet when uploading creative assets.
+</ResponseField>
+
+<ResponseField name="Format" type="enum" required>
+  The display technology of the billboard. Accepted values:
+
+  - **Static** — A printed vinyl or paper face; artwork changes require a physical swap.
+  - **Digital (LED)** — A programmable LED screen capable of rotating creative content.
+  - **Backlit** — A static face illuminated from behind for enhanced nighttime visibility.
+</ResponseField>
+
+<ResponseField name="Price per day" type="number" required>
+  The base daily rate (in your account currency) used as the foundation for all booking price calculations. See [Pricing and invoicing](/bookings/invoices) for how the final booking cost is derived.
+</ResponseField>
+
+<ResponseField name="Photos" type="array">
+  One or more images of the billboard structure and its surrounding environment. Photos help advertisers assess visibility, traffic context, and surroundings before booking.
+</ResponseField>
+
+<ResponseField name="Status" type="enum" required>
+  The current operational state of the billboard. See [Billboard lifecycle](#billboard-lifecycle) below for what each value means.
+</ResponseField>
+
+## Billboard lifecycle
+
+A billboard moves through the following states over its operational life. Status directly controls whether the billboard appears as available for new bookings.
+
+| Status | Description | Available for booking? |
+|---|---|---|
+| **Active** | The billboard is operational and open for new reservations. | ✅ Yes |
+| **Inactive** | The billboard has been taken offline by the operator (e.g., seasonally closed or decommissioned). | ❌ No |
+| **Under Maintenance** | The billboard is temporarily unavailable due to structural or technical repairs. | ❌ No |
+
+To change a billboard's status, navigate to **Inventory → Billboards**, open the billboard record, and update the **Status** field. Any existing approved bookings that overlap with a maintenance or inactive period will be flagged for review.
+
+## Relationship to campaigns and bookings
+
+A single billboard can appear in multiple campaigns over time — each campaign simply books a distinct date range on that billboard. Here is how the three concepts relate:
+
+- **Billboard** — The physical display. It exists independently of any campaign.
+- **Campaign** — A logical grouping of one or more billboard bookings under a shared objective and timeline. Learn more in [Campaigns](/concepts/campaigns).
+- **Booking** — An individual reservation that links a specific billboard to a specific campaign for a defined date range. Learn more in [Bookings](/concepts/bookings).
+
+When an advertiser selects a billboard inside a campaign, AddtoZ creates a booking record that holds that billboard slot for the requested dates. The billboard's availability calendar updates immediately to reflect the reserved period.
+
+<Note>
+  A billboard slot cannot be double-booked. If a slot is taken, it will appear as unavailable in the calendar.
+</Note>

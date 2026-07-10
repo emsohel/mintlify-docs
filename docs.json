@@ -1,0 +1,76 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "AddtoZ",
+  "theme": "almond",
+  "colors": {
+    "primary": "#ef7025",
+    "light": "#eec9bc",
+    "dark": "#4fa1ab"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/billboards",
+              "concepts/campaigns",
+              "concepts/bookings"
+            ]
+          },
+          {
+            "group": "Managing Billboards",
+            "pages": [
+              "billboards/adding-billboards",
+              "billboards/locations",
+              "billboards/availability",
+              "billboards/media-upload"
+            ]
+          },
+          {
+            "group": "Campaigns",
+            "pages": [
+              "campaigns/creating-campaigns",
+              "campaigns/scheduling",
+              "campaigns/targeting",
+              "campaigns/analytics"
+            ]
+          },
+          {
+            "group": "Bookings & Payments",
+            "pages": [
+              "bookings/creating-bookings",
+              "bookings/invoices",
+              "bookings/payments"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "faq",
+              "troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "/quickstart"
+    }
+  }
+}

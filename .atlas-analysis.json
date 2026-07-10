@@ -1,0 +1,87 @@
+{
+  "projectType": "saas",
+  "projectName": "AddtoZ",
+  "projectDescription": "A web-based billboard and outdoor advertising management platform for planning, booking, and tracking billboard campaigns.",
+  "theme": "almond",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/billboards",
+              "concepts/campaigns",
+              "concepts/bookings"
+            ]
+          },
+          {
+            "group": "Managing Billboards",
+            "pages": [
+              "billboards/adding-billboards",
+              "billboards/locations",
+              "billboards/availability",
+              "billboards/media-upload"
+            ]
+          },
+          {
+            "group": "Campaigns",
+            "pages": [
+              "campaigns/creating-campaigns",
+              "campaigns/scheduling",
+              "campaigns/targeting",
+              "campaigns/analytics"
+            ]
+          },
+          {
+            "group": "Bookings & Payments",
+            "pages": [
+              "bookings/creating-bookings",
+              "bookings/invoices",
+              "bookings/payments"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "faq",
+              "troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Billboard inventory management with location mapping",
+    "Campaign creation and scheduling",
+    "Availability calendar for billboard slots",
+    "Media/artwork upload and management",
+    "Booking and reservation system",
+    "Invoicing and payment processing",
+    "Campaign performance analytics and reporting",
+    "Audience targeting by geography and demographics",
+    "Multi-user account management",
+    "Dashboard overview of active campaigns and revenue"
+  ],
+  "publicApiSurface": [
+    "Billboard listing and search",
+    "Campaign CRUD operations",
+    "Booking management",
+    "Media asset upload",
+    "Analytics and reporting endpoints",
+    "User and account management"
+  ]
+}

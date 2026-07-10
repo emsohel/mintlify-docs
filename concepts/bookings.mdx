@@ -1,0 +1,69 @@
+---
+title: "Bookings: How to Reserve Billboard Slots in AddtoZ"
+sidebarTitle: "Bookings"
+description: "Learn how AddtoZ bookings work — from creating a reservation and uploading artwork through operator approval, invoicing, and going live on a billboard."
+---
+
+A **Booking** in AddtoZ is a confirmed reservation of a specific billboard for a set date range. Bookings are the transactional unit that connects campaigns to physical billboard slots — every time you add a billboard to a campaign, AddtoZ creates a booking record to track that reservation through its full lifecycle.
+
+## Booking lifecycle
+
+A booking moves through six states from initial request to completion. The diagram below shows the standard progression.
+
+<Steps>
+  <Step title="Pending">
+    You have submitted a booking request for a billboard slot. The reservation is tentatively held while the billboard operator reviews and approves the request. The billboard's availability calendar marks this slot as pending so no other advertiser can claim it.
+  </Step>
+  <Step title="Approved">
+    The operator has confirmed the booking. The slot is now firmly reserved, and AddtoZ automatically generates an invoice for the booking amount. You will receive a notification with the invoice details.
+  </Step>
+  <Step title="Artwork Submitted">
+    You have uploaded the required creative assets for this booking. The operator reviews the artwork against the billboard's format and dimension specifications before the campaign goes live.
+  </Step>
+  <Step title="Live">
+    Your campaign is currently running on the billboard. The flight dates are active and the creative is displaying. You can monitor impressions and performance data from the campaign dashboard.
+  </Step>
+  <Step title="Completed">
+    The booking's end date has passed. The billboard slot has been released back to the operator's available inventory. The booking record is read-only and remains accessible for reporting and invoicing history.
+  </Step>
+  <Step title="Cancelled">
+    The booking was cancelled before the campaign went live. The billboard slot is released immediately upon cancellation. See [Pricing and invoicing](#pricing-and-invoicing) for information on applicable cancellation fees.
+  </Step>
+</Steps>
+
+## What happens at each stage
+
+Understanding what both you (the advertiser) and the billboard operator need to do at each stage keeps your campaign on track.
+
+| Stage | Advertiser actions | Operator actions |
+|---|---|---|
+| **Pending** | Verify booking details (dates, billboard, campaign assignment). Await operator response. | Review the booking request, check for scheduling conflicts, and approve or decline. |
+| **Approved** | Pay or acknowledge the generated invoice. Begin preparing creative assets to the required specifications. | Issue the invoice and confirm slot availability in the operations schedule. |
+| **Artwork Submitted** | Upload final creative files in the correct format and dimensions. Respond promptly to any revision requests. | Review submitted artwork for compliance with format, dimensions, and content policies. Approve or request changes. |
+| **Live** | Monitor campaign performance via the dashboard. Report any display issues to the operator immediately. | Ensure the creative is displaying correctly. Address any technical issues promptly. |
+| **Completed** | Download performance reports and invoices for records. | Mark the slot as available for future bookings. |
+| **Cancelled** | Review the operator's cancellation policy for any applicable fees. | Release the slot back to inventory and issue any relevant credit notes. |
+
+## Pricing and invoicing
+
+Booking price is calculated using a straightforward formula:
+
+<Note>
+**Booking price = Price per day × Number of days**
+</Note>
+
+For example, a billboard priced at **$150 per day** booked for **14 days** generates a booking total of **$2,100**.
+
+AddtoZ auto-generates an invoice the moment the operator approves a booking. The invoice includes:
+
+- Billboard name and location
+- Booking start and end dates
+- Daily rate and total number of days
+- Calculated total amount due
+- Payment due date and accepted payment methods
+
+You can view, download, and manage all invoices from the [Invoices](/bookings/invoices) section. Invoices are also accessible directly from the booking detail page under **Billing**.
+
+<Warning>
+  Cancelling a booking after approval may incur cancellation fees as defined in the billboard operator's terms.
+</Warning>

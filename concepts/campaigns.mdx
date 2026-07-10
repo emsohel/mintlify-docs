@@ -1,0 +1,75 @@
+---
+title: "Campaigns: Organize and Track Your Outdoor Advertising"
+sidebarTitle: "Campaigns"
+description: "Understand how AddtoZ campaigns group billboard bookings, dates, artwork, and budgets into one trackable advertising effort you can manage end to end."
+---
+
+A **Campaign** in AddtoZ groups one or more billboard bookings under a shared objective, budget, and timeline. Instead of managing each billboard reservation in isolation, use campaigns to coordinate your entire advertising flight — tracking total reach, creative assets, and spend in a single place.
+
+## Campaign properties
+
+<ResponseField name="Name" type="string" required>
+  A descriptive label for the campaign (e.g., `Summer Sale 2025`). Choose a name that reflects the campaign's goal or promotion so your team can identify it at a glance.
+</ResponseField>
+
+<ResponseField name="Start & end date" type="date" required>
+  The campaign flight dates — the window during which your billboard bookings are expected to run. Individual bookings within the campaign must fall within these outer boundaries.
+</ResponseField>
+
+<ResponseField name="Budget" type="number">
+  An optional total spend cap for the campaign. AddtoZ displays your running cost as you add billboard bookings, alerting you when you approach or exceed the defined budget.
+</ResponseField>
+
+<ResponseField name="Status" type="enum" required>
+  The current state of the campaign. See [Campaign statuses explained](#campaign-statuses-explained) below for what each value means and how to transition between them.
+</ResponseField>
+
+<ResponseField name="Billboards" type="array" required>
+  The billboard slots included in this campaign. Each entry corresponds to a booking — a specific billboard reserved for a specific date range. See [Bookings](/concepts/bookings) for details.
+</ResponseField>
+
+<ResponseField name="Artwork" type="array">
+  Creative files uploaded for each billboard format in the campaign. AddtoZ enforces per-format dimension and file-type requirements at upload time to ensure compatibility with Static, Digital (LED), and Backlit displays.
+</ResponseField>
+
+## Campaign statuses explained
+
+Campaign status reflects where the campaign sits in its lifecycle and controls which actions are available to you and the billboard operator.
+
+<Steps>
+  <Step title="Draft">
+    The campaign has been created but not yet submitted for approval. You can freely add or remove billboard bookings, adjust dates, update artwork, and modify the budget. No invoices are generated in this state.
+
+    **Move to Active** by submitting the campaign for operator review. All bookings within the campaign will transition to **Pending**.
+  </Step>
+  <Step title="Active">
+    The campaign has been approved and at least one booking is confirmed. Invoices have been generated for approved bookings. Artwork submission and final preparations happen in this state.
+
+    **Move to Paused** if you need to temporarily suspend activity (e.g., pending creative revisions). **Move to Completed** automatically when all flight dates have passed.
+  </Step>
+  <Step title="Paused">
+    The campaign is temporarily on hold. Live bookings already running on billboards are not interrupted, but no new bookings can be approved while the campaign is paused.
+
+    **Return to Active** by resuming the campaign once the reason for the pause is resolved.
+  </Step>
+  <Step title="Completed">
+    All flight dates for every booking in the campaign have passed. The campaign is read-only. You can still access performance reports, invoices, and artwork records.
+
+    Completed campaigns cannot be reopened. Create a new campaign to run a follow-up flight.
+  </Step>
+</Steps>
+
+## Campaigns vs. bookings
+
+It is important to understand the distinction between a campaign and a booking:
+
+| Concept | What it represents | Scope |
+|---|---|---|
+| **Campaign** | The overall advertising plan — your objective, budget, timeline, and creative strategy. | One campaign can contain many bookings. |
+| **Booking** | An individual reservation of a specific billboard for a specific date range within a campaign. | One booking belongs to exactly one campaign. |
+
+Think of a campaign as the container and bookings as the line items inside it. You manage high-level settings (budget, flight window, artwork) at the campaign level, while each booking tracks the status, pricing, and approval for a single billboard slot. See [Bookings](/concepts/bookings) for a full breakdown of the booking lifecycle.
+
+<Tip>
+  Use campaigns to group related billboard bookings so you can track total reach, impressions, and spend in one place.
+</Tip>
