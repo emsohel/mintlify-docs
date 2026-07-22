@@ -9,60 +9,71 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "products": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "product": "APi",
+        "tabs": [
           {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "account-setup"
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "pages": [
-              "concepts/billboards",
-              "concepts/campaigns",
-              "concepts/bookings"
-            ]
-          },
-          {
-            "group": "Managing Billboards",
-            "pages": [
-              "billboards/adding-billboards",
-              "billboards/locations",
-              "billboards/availability",
-              "billboards/media-upload"
-            ]
-          },
-          {
-            "group": "Campaigns",
-            "pages": [
-              "campaigns/creating-campaigns",
-              "campaigns/scheduling",
-              "campaigns/targeting",
-              "campaigns/analytics"
-            ]
-          },
-          {
-            "group": "Bookings & Payments",
-            "pages": [
-              "bookings/creating-bookings",
-              "bookings/invoices",
-              "bookings/payments"
-            ]
-          },
-          {
-            "group": "Help",
-            "pages": [
-              "faq",
-              "troubleshooting"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Get Started",
+                "pages": [
+                  "introduction",
+                  "quickstart",
+                  "account-setup"
+                ]
+              },
+              {
+                "group": "Core Concepts",
+                "pages": [
+                  "concepts/billboards",
+                  "concepts/campaigns",
+                  "concepts/bookings"
+                ]
+              },
+              {
+                "group": "Managing Billboards",
+                "pages": [
+                  "billboards/adding-billboards",
+                  "billboards/locations",
+                  "billboards/availability",
+                  "billboards/media-upload"
+                ]
+              },
+              {
+                "group": "Campaigns",
+                "pages": [
+                  "campaigns/creating-campaigns",
+                  "campaigns/scheduling",
+                  "campaigns/targeting",
+                  "campaigns/analytics"
+                ]
+              },
+              {
+                "group": "Bookings & Payments",
+                "pages": [
+                  "bookings/creating-bookings",
+                  "bookings/invoices",
+                  "bookings/payments"
+                ]
+              },
+              {
+                "group": "Help",
+                "pages": [
+                  "faq",
+                  "troubleshooting"
+                ]
+              }
             ]
           }
         ]
+      },
+      {
+        "product": "Untitled Product"
+      },
+      {
+        "product": "XCloud"
       }
     ]
   },
